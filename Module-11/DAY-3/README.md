@@ -1,68 +1,72 @@
-# Ex.No:11(C)             JAVA LINKED HASHMAP
+# Ex.No:12(C)             JAVA STACK & VECTOR
  ## AIM :
 
-To Create a java program to display the contains key of 104 and to retrieve the key and value using linked hash map.
-
+To Write a java program to create vector and read the elements for two vector in java collection.(Use equals method )
 ## ALGORITHM :
 
 1.	Start the Program
-2.	Import `java.util.*`
-3.	Define class `A` with `main` method:
--	a) Initialize `Scanner` and read integer `n`
--	b) Create a `LinkedHashMap` named `hash` to store integer keys and string values
-4.	Use a loop to:
--	a) Read an integer and string from the user
--	b) Add the integer as the key and the string as the value in `hash`
-5.	Use an enhanced `for` loop to iterate through `hash` and print each key-value pair
-6.	Check if the `hash` contains the key `104` and print the result
-7.	End
+2.	In `main`:
+-	a) Create a `Scanner` object to read input.
+-	b) Read an integer `n1` (the size of the first vector).
+-	c) Initialize `Vector<String> vector1`.
+-	d) Use a `for` loop to read `n1` strings and add each to `vector1`.
+3.	Repeat similar steps for a second vector:
+a)	Read an integer `n2` (size of the second vector).
+b)	Initialize `Vector<String> vector2`.
+c)	Use a `for` loop to read `n2` strings and add each to `vector2`.
+4.	Use `equals()` to compare `vector1` and `vector2` and print whether they are equal.
+5.	End.
+
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a JAVA LINKED HASH MAP using Java
-Developed by: Harsha vardhan
+Program to implement a JAVA STACK & VECTOR  using Java
+Developed by: Harsha Vardhan
 RegisterNumber: 212222240114
 */
 ```
 
 ## Sourcecode.java:
-
 ```
-import java.util.*;  
-public class Mapp{  
- public static void main(String args[]){ 
-     
-  LinkedHashMap<Integer,String> map=new LinkedHashMap<Integer,String>(); 
-  Scanner sc=new Scanner(System.in);
+import java.util.*;
+public class VectorDemo {
+	public static void main(String args[])
+	{
+		Vector<String> vec_tor1 = new Vector<String>();
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+	    for(int i=0;i<size;i++)
+	    {
+		vec_tor1.add(sc.next());
+	    }
+	   	System.out.println("The vector is: " + vec_tor1);
+
+	    Vector<String> vec_tor2 = new Vector<String>();
+        int size2=sc.nextInt();
+        for(int i=0;i<size2;i++)
+        {
+        vec_tor2.add(sc.next());
+        }
+       
   
-  int size=sc.nextInt();
-  for(int i=0;i<size;i++)
-  {
-  Integer a=sc.nextInt();
-  String b=sc.next();
-  map.put(a,b);  
-  } 
- 
+       System.out.println("The Vector is: "
+                           + vec_tor2);
   
- Iterator<Integer> keySetIterator = map.keySet().iterator(); while(keySetIterator.hasNext()){ Integer key = keySetIterator.next(); System.out.println("key: " + key + " value: " + map.get(key)); }
-
-System.out.println("Does HashMap contains 104 as key: " + map.containsKey(104));
-
-
- }  
+        System.out.println("Are both of them equal? "
+                           + vec_tor1.equals(vec_tor2));
+		}
 }
 ```
 
-
 ## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/28d2a944-73d7-4073-8d62-360ceda31f95)
-
+![image](https://github.com/user-attachments/assets/9735e21e-602b-4252-8f94-995cc3508352)
 
 ## RESULT:
-Thus the  java program to display the contains key of 104 and to retrieve the key and value using linked hash map was executed successfully.
+
+Thus the java program to create vector and read the elements for two vector in java collection.(Use equals method ) was executed successfully.
 
 
 
