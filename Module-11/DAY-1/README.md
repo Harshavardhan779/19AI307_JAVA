@@ -1,61 +1,55 @@
-# Ex.No:12(A)         JAVA TREE MAP
+# Ex.No:11(A)         JAVA TREESET
 ## AIM:
- To implement a Java program to associate the specified value with the specified key in a Tree Map.
+ To develop a Java program to iterate through all elements in a tree set.
+
 
 ## ALGORITHM :
-
-1.	Start the Program
-2.	Import `java.util.*` and `java.util.Map.Entry`
-3.	Define `Example6` class with `main` method:
--	a) Initialize `TreeMap<String, String> tree_map1`
--	b) Read integer `size` for entries count.
-4.	Use a loop to:
--	a) Read `String` values `n1` and `s1`
--	b) Insert each pair into `tree_map1`
-5.	Print `tree_map1` as `"Original TreeMap content: "`
-6.	Define `sort_key` class that implements `Comparator<String>`:
--	Override `compare` method to compare `String` values `str1` and `str2` using
-`compareTo`
-7.	End
+1.	Start
+2.	Import `java.util.*`
+3.	Define class `Main` with `main` method:
+-	a) Initialize `Scanner` and read integer `n`
+-	b) Create a `TreeSet` named `set` to store integers in sorted order
+4.	Use a loop to read `n` integers and add each to `set`
+5.	Use an enhanced `for` loop to print each element in `set`
+6.	End
 
 
 ## PROGRAM:
  ```
 /*
-Program to implement a JAVA TREE MAP using Java
+Program to implement a JAVA TREESET using Java
 Developed by: Harsha Vardhan
 RegisterNumber: 212222240114
 */
 ```
 
 ## Sourcecode.java:
+
 ```
-import java.util.*;  
-public class ss {  
-  public static void main(String args[]){  
-  
-   TreeMap<Integer,String> tree_map=new TreeMap<Integer,String>();      
+import java.util.*;
+public class Exercise2 {
+  public static void main(String[] args) {
   Scanner sc=new Scanner(System.in);
-   int size=sc.nextInt();
-   for(int i=0;i<size;i++)
-   {
-      Integer n1 = sc.nextInt();
-      String s1= sc.next();
-       
-   	  tree_map.put(n1,s1);  
-   }
-	 
-   for (Map.Entry<Integer,String> entry : tree_map.entrySet())
-   {
-    System.out.println(entry.getKey() + "=>" + entry.getValue());
-   }
- }  
+  int size=sc.nextInt();
+  TreeSet<Integer> tree_set = new TreeSet<Integer>();
+  for(int i=0;i<size;i++)
+  {
+  tree_set.add(sc.nextInt());
+  }
+ 
+  for (Integer element : tree_set) {
+    System.out.println(element);
+    }
+ }
 }
 ```
 
+
 ## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/8d5c1fa8-72d8-4604-aaa3-d31cb625ddfc)
+![image](https://github.com/user-attachments/assets/763fed62-d294-455e-8f60-661a6cf494ad)
+
 
 ## RESULT:
-Thus the Java program to associate the specified value with the specified key in a Tree Map was executed successfully.
+Thus the java program to iterate through all elements in a tree set was executed successfully.
+
