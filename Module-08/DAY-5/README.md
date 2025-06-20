@@ -1,57 +1,38 @@
-# Ex.No:8(E)  INPUT STREAM READER.
-
+# Ex.No:9(A)          DATA I/O STREAM
 ## AIM:
-To write a Java program that takes continuous input from the user using InputStreamReader and exits when the input ends with the symbol #. The input is taken inside a do-while loop.
+To write data to multiple files using ByteArrayOutputStream, demonstrating the ability to write the same data to multiple output streams.
 ## ALGORITHM :
-1.	Start the program.
-2.	Import java.io.*.
-3.	Create an InputStreamReader and wrap it in a BufferedReader.
-    	Use a do-while loop to:
-    	Prompt and read input from the user.
-    	Check if the input ends with #.
-4.	If yes, break the loop.
-    	Otherwise, print the input.
-    	Close the input stream.
-5.	End the program
 
+1. Create two `FileOutputStream` objects (`out` and `out2`) to write to `F1.txt` and `F2.txt`.
+2. Create a `ByteArrayOutputStream` (`str`) to temporarily hold data in memory.
+3. Use `write()` to write a byte (in this case, the value `69`, corresponding to the letter 'E') to the `ByteArrayOutputStream`.
+4. Use `writeTo()` method of `ByteArrayOutputStream` to write the data from memory to both `FileOutputStream` objects (`out` and `out2`).
+5. Close the `ByteArrayOutputStream` once the data is written to the files, then print `"Success..."` to indicate the operation completed.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a INPUT STREAM READER
+Program to implement a DATA I/O STREAM using Java
 Developed by: Harsha Vardhan
-RegisterNumber: 212222240114
+RegisterNumber:  212222240114
+
+FileOutputStream out = new FileOutputStream("F1.txt");
+FileOutputStream out2 = new FileOutputStream("F2.txt");
+ByteArrayOutputStream str = new ByteArrayOutputStream();
+str.write(69);
+str.writeTo(out);
+str.writeTo(out2);
+str.close();
+System.out.println("Success...");
 */
 ```
 
-## Sourcecode.java:
-```
-import java.io.*;
-public class ReadConsole {
-
-   public static void main(String args[]) throws IOException {
-      InputStreamReader cin = null;
-
-      try {
-         cin = new InputStreamReader(System.in);
-       //  System.out.println("Enter characters, 'q' to quit.");
-         char c;
-         do {
-            c = (char) cin.read();
-            System.out.print(c);
-         } while(c != '#');
-      }finally {
-         if (cin != null) {
-            cin.close();
-         }
-      }
-   }
-}
-```
 
 ## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/64d36923-1dc1-4c33-a14f-58dc1bffd2b2)
+![Screenshot 2025-05-10 063658](https://github.com/user-attachments/assets/500d48b9-8986-48cf-ba59-745105a93f15)
+
 
 ## RESULT:
-Thus, the java program uses InputStreamReader to read input and handles loop termination based on the presence of # at the end of the input string, as specified. 
+Thus the Java Program To write data to multiple files using ByteArrayOutputStream, demonstrating the ability to write the same data to multiple output streams executed successfully.
+
