@@ -18,7 +18,7 @@
  ```
 /*
 Program to implement a Exception Handling-Run Time Exception using Java
-Developed by: 
+Developed by: Harsha Vardhan 
 RegisterNumber: 212222240114
 */
 ```
